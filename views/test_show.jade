@@ -1,0 +1,12 @@
+extends layout
+block content
+  div.row
+    div.col-xs-4
+      label Title
+      p!=test.title
+      label Content
+      p!=test.body
+      p
+        a.btn.btn-primary(href="/tests/"+test._id+"/edit") Edit
+      p
+        a.btn.btn-default(href="/") Back

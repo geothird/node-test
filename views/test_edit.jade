@@ -1,0 +1,14 @@
+extends layout
+block content
+  div.row
+    div.col-xs-4
+      form(method="post" action="/tests/:id/update")
+        .form-group
+          label Title
+          input.form-control(type="text", name="title", value=[test.title])
+        .form-group
+          label Content
+          textarea.form-control(name="body")= test.body
+          input(type="hidden", name="_id", value=test._id.toHexString())
+          br
+          input.btn.btn-primary(type="submit", value="Update")

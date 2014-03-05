@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.row
+    table.table.table-hover.table-striped
+      thead
+        th Title
+        th Content
+        th #
+      tbody
+        - each test in tests
+          tr
+            td= test.title
+            td= test.body
+            td= test._id
+
+    a.btn.btn-primary(href="/tests/new") New Test

@@ -1,0 +1,13 @@
+extends layout
+block content
+  div.row
+    div.col-xs-4
+      form(method="post")
+        .form-group
+          label Title
+          input.form-control(type="text", name="title")
+        .form-group
+          label Content
+          textarea.form-control(name="body")
+          br
+          input.btn.btn-primary(type="submit", value="Create")
